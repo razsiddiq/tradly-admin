@@ -1,0 +1,92 @@
+.dt-buttons {
+    float: right;
+    display: inline-block;
+    margin: 0 0 20px 20px;
+  }
+  
+  .dt-buttons > .btn:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .dt-buttons > .btn {
+    border-radius: 0;
+  }
+  .dt-buttons > .dt-button {
+    display: inline-block;
+  }
+  .dt-buttons > .btn + .btn {
+    margin-left: -1px;
+  }
+  
+  .btn {
+    position: relative;
+  }
+  
+  .btn-default {
+    color: #333;
+    background-color: #fcfcfc;
+    border-color: #ddd;
+  }
+  
+  
+  
+  .dt-buttons > .btn:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .dt-button-collection > .dt-button.active {
+    color: #333;
+    background-color: #daedef;
+  }
+  .dt-button-collection > .dt-button {
+    padding: 8px 15px;
+    color: #333333;
+    display: block;
+    outline: 0;
+  }
+  .dt-button-collection > * {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .form-control-sm, .input-group-sm>.form-control, .input-group-sm>.input-group-append>.btn, .input-group-sm>.input-group-append>.input-group-text, .input-group-sm>.input-group-prepend>.btn, .input-group-sm>.input-group-prepend>.input-group-text {
+   
+    line-height: 2 !important;
+}
+
+div#bootstrap-data-table-export_length {
+  float: left;
+}
+
+
+a.action_btn > i {
+  font-size: 22px !important;
+}
+
+.ml-5{
+  margin-left:5px;
+}
+
+.ml-10{
+  margin-left:10px;
+}
+
+.ml-15{
+  margin-left:15px;
+}
+
+.mr-5{
+  margin-right:5px;
+}
+
+.mr-10{
+  margin-right:10px;
+}
+
+.mr-15{
+  margin-right:15px;
+}
+
+.k-treeview span.k-in {
+  display: none !important; 
+}

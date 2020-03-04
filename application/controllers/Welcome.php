@@ -38,18 +38,17 @@ class Welcome extends CI_Controller {
 
 	public function login() {
 		$Return = array('result'=>'', 'error'=>'');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');		
+		
 
 		$email = trim($this->input->post('email'));
 		$password = trim($this->input->post('password'));	
 
 		/* Server side PHP input validation */
-		if($email==='') {
-			$Return['error'] = "Email field is required.";
-		} elseif($password===''){
-			$Return['error'] = "Password field is required.";
-		}
+		// if($email==='') {
+		// 	$Return['error'] = "Email field is required.";
+		// } elseif($password===''){
+		// 	$Return['error'] = "Password field is required.";
+		// }
 
 		if($Return['error']!=''){
 			output($Return);
@@ -59,7 +58,7 @@ class Welcome extends CI_Controller {
 
 		if ($result == TRUE) {
 			$session_data = array(
-				'email' => $email
+				'email' => 'siddiq'//$email
 			);
 			// Add user data in session
 			$this->session->set_userdata('username', $session_data);

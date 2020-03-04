@@ -12,35 +12,73 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li class="<?=(@$breadcrumbs=='Dashboard') ? 'active': '';?>">
                         <a href="<?php echo base_url();?>dashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
-                    <li class="active">
+                    <li class="<?=(@$breadcrumbs=='Listings') ? 'active': '';?>">
                         <a href="<?php echo base_url();?>listings"> <i class="menu-icon fa fa-laptop"></i>Approve Listings <span class="badge badge-primary">5</span></a>
                     </li>
 
-                    <li class="active">
+                    <li class="<?=(@$breadcrumbs=='Approve Groups') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>listings/approve_groups"> <i class="menu-icon fa fa-group"></i>Approve Groups</a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Transactions') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>transactions"> <i class="menu-icon fa fa-table"></i>Transaction </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Users') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>users"> <i class="menu-icon fa fa-users"></i>Users </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Search') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>search"> <i class="menu-icon fa fa-search"></i>Search </a>
+                    </li>
+
+                    <!-- <li class="">
                         <a href="<?php echo base_url();?>catetory"> <i class="menu-icon fa fa-table"></i>Category </a>
                     </li>
-                    
-                    <!-- <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
-                            <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
-                            <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
-                            <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
-                            <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
-                            <li><i class="fa fa-fire"></i><a href="ui-modals.html">Modals</a></li>
-                            <li><i class="fa fa-book"></i><a href="ui-switches.html">Switches</a></li>
-                            <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
-                            <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li>
+                     -->
+                    <li class="menu-item-has-children dropdown <?=(@$breadcrumbs=='Roles') ? 'active show open': '';?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cloud"></i>Collections</a>
+                        <ul class="sub-menu children dropdown-menu <?=(@$breadcrumbs=='Roles') ? 'show': '';?>">
+                            <li class="<?=(@$breadcrumbs=='Roles') ? 'active': '';?>"><i class="fa fa-puzzle-piece"></i><a href="<?php echo base_url();?>roles">Home Page Banner</a></li>
+                            <li class="<?=(@$breadcrumbs=='Roles') ? 'active': '';?>"><i class="fa fa-puzzle-piece"></i><a href="<?php echo base_url();?>roles">Editors Pick Products</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children dropdown">
+
+
+                    <li class="menu-item-has-children dropdown <?=(@$breadcrumbs=='Roles') ? 'active show open': '';?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Settings</a>
+                        <ul class="sub-menu children dropdown-menu <?=(@$breadcrumbs=='Roles') ? 'show': '';?>">
+                            <li class="<?=(@$breadcrumbs=='Roles') ? 'active': '';?>"><i class="fa fa-puzzle-piece"></i><a href="<?php echo base_url();?>roles">Roles</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="<?=(@$breadcrumbs=='Commissions') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>settings/commissions"> <i class="menu-icon fa fa-money"></i>Commissions </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Extensions') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>settings/extensions"> <i class="menu-icon fa fa-anchor"></i>Extensions </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Setup guide') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>settings/setup_guide"> <i class="menu-icon fa fa-users"></i>Setup Guide </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Business Info') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>settings/business_info"> <i class="menu-icon fa fa-info-circle"></i>Business Info </a>
+                    </li>
+
+                    <li class="<?=(@$breadcrumbs=='Api') ? 'active': '';?>">
+                        <a href="<?php echo base_url();?>settings/api"> <i class="menu-icon fa fa-cog"></i>Api </a>
+                    </li>
+
+                    <!-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
@@ -53,9 +91,7 @@
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Basic Form</a></li>
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
                         </ul>
-                    </li> -->
-
-                   
+                    </li> -->                   
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
